@@ -1,7 +1,10 @@
-﻿using System;
+﻿using ChrisCakes.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace ChrisCakes.Controllers
@@ -15,6 +18,29 @@ namespace ChrisCakes.Controllers
         }
         public ActionResult About()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult About(FormCollection formCollection)
+        {
+            StringBuilder s = new StringBuilder();
+            foreach (string key in Request.Form.Keys)
+            {
+                s.AppendLine(key + ": " + Request.Form[key]);
+            }
+            string formData = s.ToString();
+            ViewBag.Message = formData;
+            Gmailer mailer = new Gmailer();
+            mailer.GmailUsername = WebConfigurationManager.AppSettings["GoogClientID"];
+            mailer.GmailPassword = WebConfigurationManager.AppSettings["GoogClientSecret"];
+
+
+            mailer.ToEmail = "dangahagan@gmail.com";
+            mailer.Subject = "Chris Cakes Contact Form";
+            mailer.Body = formData;
+            mailer.IsHtml = true;
+            mailer.Send();
+
             return View();
         }
         public ActionResult BreakfastALaCarte()

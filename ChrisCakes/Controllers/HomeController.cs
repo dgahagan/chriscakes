@@ -10,13 +10,59 @@ namespace ChrisCakes.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.ShowCarousel = true;
             return View();
         }
-
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            return View();
+        }
+        public ActionResult BreakfastALaCarte()
+        {
+            return View();
+        }
+        public ActionResult BreakfastMenus()
+        {
+            return View();
+        }
+        public ActionResult DayOfEventInformation()
+        {
+            return View();
+        }
+        public ActionResult Fundraising()
+        {
+            return View();
+        }
+        public ActionResult HowToBook()
+        {
+            return View();
+        }
+        public ActionResult HowToRunASuccessfulFundraiser()
+        {
+            return View();
+        }
+        public ActionResult InvoicePayment()
+        {
+            return View();
+        }
+        public ActionResult LunchAndDinner()
+        {
+            return View();
+        }
+        public ActionResult MenusNMore()
+        {
+            return View();
+        }
+        public ActionResult MenusNMoreALaCarte()
+        {
+            return View();
+        }
+        public ActionResult Services()
+        {
+            return View();
+        }
+        public ActionResult YourGroup()
+        {
             return View();
         }
 

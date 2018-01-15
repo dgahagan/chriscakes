@@ -4,262 +4,286 @@
 }
 <script src="~/Scripts/moment.min.js"></script>
 <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<style>
+    .big-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">
+    Contact Us
+
+
+
+</h1>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index">Home</a>
+    </li>
+    <li class="breadcrumb-item active">
+        Contact Us
+
+
+
+
+    </li>
+</ol>
+
+
+
+
+<hr>
+
+
 
 @ViewBag.Message
 @using (Html.BeginForm("About", "Home", FormMethod.Post))
 {
     <div class="row">
-        <div class='col-sm-4'>
+        <div class='form-horizontal'>
             <div class="form-group">
-                <label for="datetimepicker1">Event Start Date and Time</label>
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                <label class="col-sm-2" for="datetimepicker1">Event Start Date</label>
+                <div class='input-group date col-md-2' id='datetimepicker1'>
+                    <input type='text' class="form-control" id="EventStartDate" name="EventStartDate" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
                 </div>
-                <div class='input-group date' id='datetimepicker2'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="datetimepicker3">Event End Time</label>
 
-                <div class='input-group date' id='datetimepicker3'>
-                    <input type='text' class="form-control" />
+            </div>
+            <div class="form-group">
+
+                <label class="col-sm-2" for="datetimepicker2">Event Start Time</label>
+                <div class='input-group date col-md-2' id='datetimepicker2'>
+                    <input type='text' class="form-control" id="EventStartTime" name="EventStartTime" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2" for="datetimepicker3">Event End Time</label>
+
+                <div class='input-group date col-md-2' id='datetimepicker3'>
+                    <input type='text' class="form-control" id="EventEndTime" name="EventEndTime" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                 </div>
             </div>
             <div class="form-group">
-                <label for="fundraiser">Is this event a fundraiser?</label>
-                <input type="checkbox" class="form-control" name="fundraiser">
+                <label class="col-sm-3" for="fundraiser">Is this event a fundraiser?</label>
+                <input class="col-sm-1 big-checkbox" type="checkbox" name="fundraiser">
             </div>
+
             <div class="form-group">
-                <label for="typeoffundraiser">Type of fundraiser you wish to book?</label>
+                <label class="col-sm-4" for="typeoffundraiser">Type of fundraiser you wish to book?</label>
                 <select name="typeoffundraiser" id="typeoffundraiser">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="Original Chris Cakes">Original Chris Cakes</option>
+                    <option value="Hot Dog Bash">Hot Dog Bash </option>
+                    <option value="Coney Night">Coney Night</option>
+                    <option value="Spaghetti Dinner">Spaghetti Dinner</option>
                 </select>
             </div>
+
             <div class="form-group">
-                <label for="typeofbreakfast">Type of Premier Breakfast you wish to book?</label>
+                <label class="col-sm-4" for="typeofbreakfast">Type of Premier Breakfast you wish to book?</label>
                 <select name="typeofbreakfast" id="typeofbreakfast">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="Easy Breezy">Easy Breezy</option>
+                    <option value="Cakes and Eggs">Cakes and Eggs</option>
+                    <option value="Top Cake">Top Cake</option>
+                    <option value="Chris Cakes Deluxe">Chris Cakes Deluxe</option>
+                    <option value="Big Chris">Big Chris</option>
+                    <option value="French Toast Lite">French Toast Lite</option>
+                    <option value="French Toast and Eggs">French Toast and Eggs</option>
+                    <option value="Biscuits and Gravy">Biscuits and Gravy</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="typeofmenusnmore">Type of Menus n More you wish to book?</label>
+                <label class="col-sm-4" for="typeofmenusnmore">Type of Menus n More you wish to book?</label>
                 <select name="typeofmenusnmore" id="typeofmenusnmore">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="Box Lunches">Box Lunches</option>
+                    <option value="Dogs N More">Dogs N More</option>
+                    <option value="Coneys N More">Coneys N More</option>
+                    <option value="Taco Bar/ Nacho Bar">Taco Bar/ Nacho Bar</option>
+                    <option value="Brats N More">Brats N More</option>
+                    <option value="Burgers N More">Burgers N More</option>
+                    <option value="Burgers N Dogs">Burgers N Dogs</option>
+                    <option value="Burgers N Brats">Burgers N Brats</option>
+                    <option value="Grill Chicken N More">Grill Chicken N More</option>
+                    <option value="Pasta N More">Pasta N More</option>
+                    <option value="3">BBQ N More</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="fundraiser">Will you have 2-3 volunteers?</label>
-                <input type="checkbox" class="form-control" name="volunteers">
+                <label class="col-sm-4" for="fundraiser">Will you have 2-3 volunteers?</label>
+                <input class="big-checkbox" type="checkbox" name="volunteers">
             </div>
             <div class="form-group">
-                <label for="orgnanizationName">Organization Name</label>
+                <label class="col-sm-4" for="orgnanizationName">Organization Name</label>
                 <input type="text" name="organizationname" id="organizationname">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Serving Address</label>
+                <label class="col-sm-4" for="orgnanizationName">Serving Address</label>
                 <input type="text" name="servingaddress" id="servingaddress">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">City</label>
+                <label class="col-sm-4" for="orgnanizationName">City</label>
                 <input type="text" name="city" id="city">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">
-                    State<label>
+                <label class="col-sm-4" for="orgnanizationName">
+                    State<lable>
                         <input type="text" name="state" id="state">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Zip Code</label>
+                <label class="col-sm-4" for="orgnanizationName">Zip Code</label>
                 <input type="text" name="zip" id="zip">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Contact Name</label>
+                <label class="col-sm-4" for="orgnanizationName">Contact Name</label>
                 <input type="text" name="contactname" id="contactname">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Contact Phone Number</label>
+                <label class="col-sm-4" for="orgnanizationName">Contact Phone Number</label>
                 <input type="text" name="contactphone" id="contactphone">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Phone number for day of event</label>
+                <label class="col-sm-4" for="orgnanizationName">Phone number for day of event</label>
                 <input type="text" name="eventphone" id="eventphone">
             </div>
 
 
             <div class="form-group">
-                <label for="orgnanizationName">Contact Email Address</label>
+                <label class="col-sm-4" for="orgnanizationName">Contact Email Address</label>
                 <input type="text" name="contactemail" id="contactemail">
             </div>
 
 
             <div class="form-group">
-                <label for="typeofmenusnmore">Where did you hear about us?</label>
+                <label class="col-sm-4" for="typeofmenusnmore">Where did you hear about us?</label>
                 <select name="wherediyouhearaboutus" id="wheredidyouhearaboutus">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="Word of Mouth ">Word of Mouth </option>
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Other">Other</option>
                 </select>
-                <div class="form-group">
-                    <label for="orgnanizationName">Message</label>
-                    <textarea name="message" id="message" class="col-sm-12"></textarea>
-                </div>
+
             </div>
-            <input type="submit" value="Submit" />
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datetimepicker({
-                        format: 'LL'
-                    });
-                });
-            </script>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker2').datetimepicker({
-                        format: 'LT'
-                    });
-                });
-            </script>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker3').datetimepicker({
-                        format: 'LT'
-                    });
-                });
-            </script>
+            <div class="form-group">
+                <label class="col-sm-4" for="orgnanizationName">Message</label>
+                <textarea name="message" id="message" class="col-md-8"></textarea>
+            </div>
+            <input class="btn btn-lg btn-success" type="submit" value="Submit" />
+            <hr />
         </div>
     </div>
-}
+}        <br /><br />
+<div class="row">
 
-    <div class="row">
+    <div class="col-lg-12">
 
-        <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">
-            Contact Us
-
-
-
-        </h1>
-
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
+        <ul>
+            <li>
+                Pre-selling tickets is the backbone to any successful fundraiser. Chris Cakes is always prepared for
+                walk-ins. Many events charge an extra $1 or $2 at the door to encourage advance ticket sales. If
+                you sell 300 tickets and only 220 actually eat, remainder 80 tickets sold is an “out right” donation
+                to your group. The more you feed, the less we charge, the more your group makes!
             </li>
-            <li class="breadcrumb-item active">
-                Contact Us
-
-
-
-
+            <li>
+                Chris Cakes serves in increments of 3 hours. Depending on service hours and number of people to feed,
+                our office will determine the number of grills for your event. We strongly suggest selling seating
+                times. Selling 75 tickets for each 30 minute time block will also allow for walk-ins. By selling
+                seating times, you will control the flow of your crowd ensuring not all will show at the same time,
+                or have long lines (for groups of 300 or more where applicable).
             </li>
-        </ol>
-        <div class="row">
-
-            <div class="col-lg-12">
-                <ul>
-                    <li>
-                        Pre-selling tickets is the backbone to any successful fundraiser. Chris Cakes is always prepared for
-                        walk-ins. Many events charge an extra $1 or $2 at the door to encourage advance ticket sales. If
-                        you sell 300 tickets and only 220 actually eat, remainder 80 tickets sold is an “out right” donation
-                        to your group. The more you feed, the less we charge, the more your group makes!
-                    </li>
-                    <li>
-                        Chris Cakes serves in increments of 3 hours. Depending on service hours and number of people to feed,
-                        our office will determine the number of grills for your event. We strongly suggest selling seating
-                        times. Selling 75 tickets for each 30 minute time block will also allow for walk-ins. By selling
-                        seating times, you will control the flow of your crowd ensuring not all will show at the same time,
-                        or have long lines (for groups of 300 or more where applicable).
-                    </li>
-                    <li>
-                        Chris Cakes is most successful when planned around other activities that will draw attendance. Book fairs,
-                        science fairs, music performances, puppet shows, plays, before sporting events, etc.
-                    </li>
-                    <li>
-                        Theme your event Pancakes and Pajamas, Breakfast with Santa, breakfast with the Easter Bunny, superheroes,
-                        famous book characters, etc.
-                    </li>
-                    <li>
-                        Many hands make for light work! Chris Cakes prices are structured to partner with 2 to 4 of your volunteers.
-                        Chris Cakes can bring additional staff for a nominal fee. Volunteers will help unload, set up, light
-                        serving, reload and clean-up of your event.
-                    </li>
-                    <li>
-                        Don’t forget: it’s a fundraiser. Consider the price you pay when eating out! We have been doing this
-                        for many years. Ask our office any questions you have… we have the answers!
-                    </li>
-                    <li>
-                        In your advertising, please include “As Seen on Food Network,” “Guinness Book World Record Holders,”
-                        and “Caution: Beware of Flying Pancakes.” Feel free to download our logos, a sample flyer, tickets,
-                        and word search. You are also welcome to download logos and YouTube videos from our website, especially
-                        the “Pancake Robot” YouTube video, to enhance your advertising.
-                    </li>
-                    <li>
-                        Book early! We take bookings up to one year in advance. If you have a specific date, call us to check
-                        the availability on our busy calendar!
-                    </li>
-                </ul>
+            <li>
+                Chris Cakes is most successful when planned around other activities that will draw attendance. Book fairs,
+                science fairs, music performances, puppet shows, plays, before sporting events, etc.
+            </li>
+            <li>
+                Theme your event Pancakes and Pajamas, Breakfast with Santa, breakfast with the Easter Bunny, superheroes,
+                famous book characters, etc.
+            </li>
+            <li>
+                Many hands make for light work! Chris Cakes prices are structured to partner with 2 to 4 of your volunteers.
+                Chris Cakes can bring additional staff for a nominal fee. Volunteers will help unload, set up, light
+                serving, reload and clean-up of your event.
+            </li>
+            <li>
+                Don’t forget: it’s a fundraiser. Consider the price you pay when eating out! We have been doing this
+                for many years. Ask our office any questions you have… we have the answers!
+            </li>
+            <li>
+                In your advertising, please include “As Seen on Food Network,” “Guinness Book World Record Holders,”
+                and “Caution: Beware of Flying Pancakes.” Feel free to download our logos, a sample flyer, tickets,
+                and word search. You are also welcome to download logos and YouTube videos from our website, especially
+                the “Pancake Robot” YouTube video, to enhance your advertising.
+            </li>
+            <li>
+                Book early! We take bookings up to one year in advance. If you have a specific date, call us to check
+                the availability on our busy calendar!
+            </li>
+        </ul>
 
 
-            </div>
+    </div>
 
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+
+        <img src="/images/howto1.jpg" class="img-responsive" alt="">
+        <h3>
+            Skrumpy Skedaddle at Almar Orchard Sponsored by RunFit Over 2,025 people fed in just 3 hours!!!
+
+        </h3>
+
+
+    </div>
+    <div class="col-lg-8">
+
+        <div class="well text-center">
+            "You guys did an awesome job at the Skrumpy Skedaddle! Organized clean Fast good food with a FLAIR!"
+            <b>Thank you! -Dave Gillie</b>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-
-                <img src="/images/howto1.jpg" class="img-responsive" alt="">
-                <h3>
-                    Skrumpy Skedaddle at Almar Orchard Sponsored by RunFit Over 2,025 people fed in just 3 hours!!!
-
-                </h3>
-
-
-            </div>
-            <div class="col-lg-8">
-
-                <div class="well text-center">
-                    "You guys did an awesome job at the Skrumpy Skedaddle! Organized clean Fast good food with a FLAIR!"
-                    <b>Thank you! -Dave Gillie</b>
-                </div>
-            </div>
-        </div>
-
-
-        </hr>
-
-
-        <hr>
-
-
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            format: 'LL'
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>

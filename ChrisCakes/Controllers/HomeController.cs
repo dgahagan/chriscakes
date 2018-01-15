@@ -26,7 +26,7 @@ namespace ChrisCakes.Controllers
             StringBuilder s = new StringBuilder();
             foreach (string key in Request.Form.Keys)
             {
-                s.AppendLine(key + ": " + Request.Form[key]);
+                s.AppendLine(key + ": " + Request.Form[key] +"<br>" + Environment.NewLine);
             }
             string formData = s.ToString();
             ViewBag.Message = formData;
@@ -35,7 +35,7 @@ namespace ChrisCakes.Controllers
             mailer.GmailPassword = WebConfigurationManager.AppSettings["GoogClientSecret"];
 
 
-            mailer.ToEmail = "dangahagan@gmail.com";
+            mailer.ToEmail = WebConfigurationManager.AppSettings["ChrisCakesEmail"];
             mailer.Subject = "Chris Cakes Contact Form";
             mailer.Body = formData;
             mailer.IsHtml = true;

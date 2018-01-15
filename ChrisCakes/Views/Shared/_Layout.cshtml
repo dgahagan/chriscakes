@@ -14,13 +14,13 @@
     <header>
         <img src="/images/logo.png" style="margin: 0 auto;" class="center-block img-responsive">
     </header>
-    @if (ViewBag.ShowCarousel !=null)
+    @if (ViewBag.ShowCarousel != null)
     {
-    <header>
+        <header>
 
-                    <img src="/images/banner1.png" alt="Los Angeles" style="width:100%;">
+            <img src="/images/banner1.png" alt="Los Angeles" style="width:100%;">
 
-    </header>
+        </header>
     }
 
     <nav class="navbar navbar-inverse" role="navigation">
@@ -96,12 +96,102 @@
         <!-- /.container -->
     </nav>
     <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>
+                    P.O. Box 431 Clare MI, 48617
+                </h4>
 
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    Office: 989-802-0755
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    Email: <a href="mailto:chriscakesmi@sbcglobal.net">chriscakesmi@sbcglobal.net</a>
+                </h4>
+            </div>
+
+        </div>
         @RenderBody()
 
 
 
         <footer>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3> Services</h3>
+                    <a href="/Home/Services">View our Services</a>
+                </div>
+                <div class="col-md-3">
+
+
+
+                    <h3>Menus</h3>
+                    <ul>
+                        <li>
+                            <a href="/Home/Fundraising">Fundraising</a>
+                        </li>
+                        <li>
+                            <a href="/Home/BreakfastMenus">Breakfast Menus</a>
+                        </li>
+                        <li>
+                            <a href="/Home/BreakfastALaCarte">Breakfast/Breakfast A-La-Carte</a>
+                        </li>
+                        <li>
+                            <a href="/Home/LunchAndDinner">Menus N More Lunch and Dinner</a>
+                        </li>
+                        <li>
+                            <a href="/Home/MenusNMore">Menus N More</a>
+                        </li>
+                        <li>
+                            <a href="/Home/MenusNMoreALaCarte">Menus N More A-La-Carte</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h3>On The Flip Side</h3>
+                    <ul>
+                        <li>
+                            <a href="/Home/InvoicePayment">Invoice, Mileage, Payment, &amp; License</a>
+                        </li>
+                        <li>
+                            <a href="/Home/HowToBook">How to Book an Event</a>
+                        </li>
+                        <li>
+                            <a href="/Home/DayOfEventInformation">Day of Event Information</a>
+                        </li>
+                        <li>
+                            <a href="/Home/YourGroup">What Your Group Needs to Help With </a>
+                        </li>
+                        <li>
+                            <a href="/Home/HowToRunASuccessfulFundraiser">How to Run a Successful Fundraiser</a>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+                <div class="col-md-3">
+
+                    <h3>Contact Us</h3>
+                    <p><a href="/Home/about" class="btn btn-info">Contact Us Online!</a></p>
+                    <p> P.O. Box 431 Clare MI, 48617</p>
+                    <p>
+                        Office: 989-802-0755
+                    </p>
+                    <p>Email: <a href="mailto:chriscakesmi@sbcglobal.net">chriscakesmi@sbcglobal.net</a></p>
+
+
+
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Chris Cakes of Michigan 2017</p>

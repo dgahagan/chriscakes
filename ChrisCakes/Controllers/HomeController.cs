@@ -29,7 +29,7 @@ namespace ChrisCakes.Controllers
                 s.AppendLine(key + ": " + Request.Form[key] +"<br>" + Environment.NewLine);
             }
             string formData = s.ToString();
-            ViewBag.Message = formData;
+            ViewBag.Message = true;
             Gmailer mailer = new Gmailer();
             mailer.GmailUsername = WebConfigurationManager.AppSettings["GoogClientID"];
             mailer.GmailPassword = WebConfigurationManager.AppSettings["GoogClientSecret"];

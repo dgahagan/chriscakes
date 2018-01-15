@@ -34,14 +34,18 @@ namespace ChrisCakes.Utilities
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential(GmailUsername, GmailPassword);
-
-            using (var message = new MailMessage(GmailUsername, ToEmail))
+            var emailList = ToEmail.Split(',');
+            foreach (var email in emailList)
             {
-                message.Subject = Subject;
-                message.Body = Body;
-                message.IsBodyHtml = IsHtml;
-                smtp.Send(message);
+                using (var message = new MailMessage(GmailUsername, email))
+                {
+                    message.Subject = Subject;
+                    message.Body = Body;
+                    message.IsBodyHtml = IsHtml;
+                    smtp.Send(message);
+                }
             }
+
         }
     }
 }

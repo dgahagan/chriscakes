@@ -260,7 +260,39 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="images\banner1.png" />
+    <Content Include="images\book1.jpg" />
+    <Content Include="images\book2.jpg" />
+    <Content Include="images\day1.jpg" />
+    <Content Include="images\day2.jpg" />
+    <Content Include="images\day3.jpg" />
+    <Content Include="images\day4.jpg" />
+    <Content Include="images\day5.jpg" />
+    <Content Include="images\day6.jpg" />
+    <Content Include="images\fundraising1.jpg" />
+    <Content Include="images\fundraising2.jpg.png" />
+    <Content Include="images\fundraising3.jpg.png" />
+    <Content Include="images\help1.jpg" />
+    <Content Include="images\help1.png" />
+    <Content Include="images\help2.jpg" />
+    <Content Include="images\help3.jpg" />
+    <Content Include="images\home1.png" />
+    <Content Include="images\home2.png" />
+    <Content Include="images\home3.png" />
+    <Content Include="images\home4.png" />
+    <Content Include="images\home5.png" />
+    <Content Include="images\home6.png" />
+    <Content Include="images\howto1.jpg" />
+    <Content Include="images\invoice1.jpg" />
+    <Content Include="images\invoice2.jpg" />
+    <Content Include="images\invoice3.jpg" />
+    <Content Include="images\invoice4.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\services1.jpg" />
+    <Content Include="images\services2.jpg" />
+    <Content Include="images\services3.jpg" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -311,7 +343,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
